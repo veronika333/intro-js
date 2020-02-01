@@ -183,7 +183,7 @@
         <p class="card-text">Angela Hashton joined the company in 2009, to <em>initiate new relationships</em> for our growing line of H+ Sports active apparel. After being with the company for a year, she was promoted to Director of Sales. Angela is the drive behind the H+ Sport <em>ACTIVE product line</em> and has an uncanny ability to formulate strategies that have helped build our unified sales force. <em>Educating people</em> about health and nutrition is something that Angela holds dear.</p>
       </div><!-- person-card -->
 
-      <div class="person-card">
+      <div class="person-card" id="MichaelLewiston">
         <img src="images/employees/MichaelLewiston.jpg" alt="MichaelLewiston Photo">
         <div class="card-info">
           <h3 class="card-name">Michael Lewiston</h3>
@@ -253,7 +253,7 @@
   $('.branding').fadeTo(1000, 0.5).fadeTo(1000, 1).fadeTo(1000, 0.5).clickPulsateButton;
  });
  function clickPulsateButton() {
-   $('.branding').click(1);
+   $('.branding').click(1)
  }
 
  $('[data-type=mineralwater]').css("background-color", "green")
@@ -263,6 +263,30 @@
  $('#printButton').click(function() {
    window.print();
  })
+// $('p').css("font-weight", "Bold")
+ 
+ /* $(document).ready(function(){
+   var all = $(".card-text");
+   for (var i = 0; i < all.length; i++) {
+   var html = $(all[i]).html();
+   var firstWord = html.split("")[0];
+   var boldFirstWord = "<b>" + firstWord + "</b>";
+   var newhtml = html.replace(firstWord, boldFirstWord);
+   $(all[i]).html(newhtml);
+   }
+ });
+ */
+
+ for(li of document.querySelectorAll('.card-text'))
+  {
+
+    let words = li.innerHTML.split(' ');
+
+    li.innerHTML = "<strong>" + words.shift() + "</strong> " + words.join(' ');
+  }
+
+$('#MichaelLewiston').parent().prepend($("#MichaelLewiston"));
+
   </script>
   
 </body>
