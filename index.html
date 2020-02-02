@@ -21,7 +21,7 @@
         <li><a href="#history">history</a></li>
         <li><a href="#products">products</a></li>
         <li><a href="#guarantee">guarantee</a></li>
-        <li><a href="#people">people</a></li>
+        <li><a href="#people" id="people">people</a></li>
       </ul><!-- navbar -->
     </div><!-- container nav-elements -->
   </nav>
@@ -265,18 +265,21 @@
  })
 // $('p').css("font-weight", "Bold")
  
- /* $(document).ready(function(){
+ $(document).ready(function(){
    var all = $(".card-text");
    for (var i = 0; i < all.length; i++) {
    var html = $(all[i]).html();
-   var firstWord = html.split("")[0];
+   var firstWord = html.split(" ")[0];
    var boldFirstWord = "<b>" + firstWord + "</b>";
    var newhtml = html.replace(firstWord, boldFirstWord);
    $(all[i]).html(newhtml);
    }
  });
- */
+ 
 
+
+
+/*
  for(li of document.querySelectorAll('.card-text'))
   {
 
@@ -284,9 +287,12 @@
 
     li.innerHTML = "<strong>" + words.shift() + "</strong> " + words.join(' ');
   }
-
+*/
 $('#MichaelLewiston').parent().prepend($("#MichaelLewiston"));
 
+$('#people').text("personnel");
+$('h2.headline').text("personnel");
+$('#people').css('background', 'none');
   </script>
   
 </body>
