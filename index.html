@@ -200,6 +200,9 @@
 <div>
   <button type="button" id="printButton">Print</button>
 </div>
+<div>
+  <button type="button" id="weatherButton"></button>
+</div>
 <footer class="footer">
   <header class="imageheader"></header>
   <div class="container">
@@ -232,6 +235,13 @@
 
   jQuery(document).ready(function() {
     
+    $.ajax({
+  url: '//api.openweathermap.org/data/2.5/weather?q=Helsinki&APPID=c2d92c71b2a7a41bf5e920765af65975'
+}).done(function(response) {
+  console.log(response);
+  $('#weatherButton').text(response.name + ' today is ' + response.main.temp + ' and it feels like ' + response.main.feels_like);
+});
+
     var btn = $('#button');
   
     $(window).scroll(function() {
