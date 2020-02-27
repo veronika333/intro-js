@@ -344,6 +344,41 @@
   <script src="js/jquery.countdown.min.js"></script>
   <script src="js/main.js"></script>
 
+  <script>
+
+
+  document.addEventListener("mouseleave", makeVisible);
+  function makeVisible() {
+    document.getElementById("popup1").style.visibility = "visible";
+  }
+
+document.getElementById("popup1").getElementsByClassName("close")[0].addEventListener("click", closeElement);
+function closeElement() {
+  document.getElementById("popup1").style.visibility = "hidden";
+}
+
+document.getElementsByClassName("button")[0].addEventListener("click", emailValidation);
+/*
+function emailValidation() {
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(.value))
+  {
+    return (true)
+  }
+    alert("You have entered an invalid email address!")
+    return (false)
+} */
+
+document.getElementById('subscribe_poopup').getElementsByClassName("button")[0].addEventListener("click", function())
+var userInput = 'email';
+var validationResult = true;
+
+if (validationResult === true) {
+  document.getElementById('popup1').style.visibility = 'hidden';
+  document.getElementById('popup2').style.visibility = 'visible';
+}
+
+  </script>
+
 </body>
 
 </html>
