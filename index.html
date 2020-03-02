@@ -75,6 +75,13 @@
       </div>
     </div>
   </div>
+
+
+  <div>
+    <button id="popup3_button" type="button">Click Me!</button>
+  </div>
+
+
   <div id="popup3" class="overlay">
     <a class="close" href="#">&times;</a>
     <div class="popup" style="height: 350px; overflow: scroll"> 
@@ -410,6 +417,26 @@ function validateEmail() {
 
 })
 
+
+
+
+document.getElementById("popup3_button").addEventListener("click", showPopup3);
+function showPopup3() {
+  document.getElementById("popup3").style.visibility = "visible";
+}
+$('#popup3 #dialog').on('scroll', function() {
+   if ($('#popup3 #dialog').scrollTop() + $('#popup3 #dialog').height() == $('#popup3 #dialog').height()){
+        return $('#popup3 .close').css('visibility','visible');
+    }
+})
+
+jQuery(function($) {
+    $('#popup3 "label"').on('scroll', function() {
+        if($('#popup3 #dialog').scrollTop() + $('#popup3 #dialog').innerHeight() >= $('#popup3 #dialog')[0].scrollHeight) {
+            alert('end reached');
+        }
+    })
+});
 
   </script>
 
