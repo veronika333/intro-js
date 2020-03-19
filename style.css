@@ -1,0 +1,61 @@
+/*body {
+    height: 50000px;
+}
+
+img,
+#background {
+    position: fixed;
+    float: left;
+    left: 0;
+    top: 0;
+    
+
+}
+#background {
+   height: 100%;
+   width: 100%;
+   background-image: url('assets/flappy_sky.png');
+   background-repeat: repeat-x;
+   background-position: 0 0;
+   background-size: auto 100%;
+}
+#bird {
+    width: 200px;
+    left: 150px;
+}
+#pipe {
+    width: 200px;
+    top: 400px;
+    left: 150px;
+}*/
+body {
+    height: 50000px;
+}
+
+/* give elements fixed positioning so they
+wont be affected by vertical scrolling */
+img,
+#background {
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+#bird {
+    top: 10%;
+    width: 300px;
+}
+
+#background {
+    height: 100%;
+    width: 100%;
+    background-image: url('../assets/flappy_sky.png');
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    background-size: auto 100%;
+} 
+
+#pipe {
+    top: 400px;
+    
+} 
